@@ -1,0 +1,87 @@
+registro
+{
+     
+      "name": "fede prueba1",
+      "email": "lucas@federico.com",
+      "password": "1234567890"
+    
+    }
+
+loguin
+
+logueo exitosos
+      {
+     
+     "email": "lucas@federico.com",
+      "password": "1234567890"
+      
+    }
+
+user
+token requerido
+
+
+Caruso Fc Backend
+
+navbar.jsx
+
+import NavBar from './components/navBar/NavBar';
+<NavBar/>
+
+
+
+
+import React from 'react';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import "./NavBar.css"
+
+
+const NavBar = () => {
+  return (
+   <>
+   
+   
+   <div>
+   <Form>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Text className="text-muted">
+              We'll never share your email with anyone else.
+            </Form.Text>
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control type="password" placeholder="Password" />
+          </Form.Group>
+          
+          <Form.Group className="mb-3" controlId="formBasicCheckbox">
+            <Form.Check type="checkbox" label="Check me out" />
+          </Form.Group>
+          
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </Form>
+      </div>
+   
+   </>
+  );
+}
+
+
+export default NavBar ;
+
+
+
+rutas
+
+http://localhost:5173/
+
+http://localhost:5173/RegistroForm
+http://localhost:5173/login
+http://localhost:5173/Programa
+
+
