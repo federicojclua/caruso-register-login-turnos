@@ -15,6 +15,20 @@ const Registro = () => {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
+  const handleDniChange = (e) => {
+    const value = e.target.value;
+    if (/^\d*$/.test(value) && value.length <= 8) {
+      setDni(value);
+    }
+  };
+
+  const handleTextChange = (setter) => (e) => {
+    const value = e.target.value;
+    if (value.length <= 20) {
+      setter(value);
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -36,7 +50,6 @@ const Registro = () => {
       setError('Error al registrarse. Intenta nuevamente.');
     }
   };
-  
 
   return (
     <Container className="mt-5">
@@ -49,7 +62,8 @@ const Registro = () => {
             type="text"
             placeholder="Ingresa tu nombre"
             value={nombre}
-            onChange={(e) => setNombre(e.target.value)}
+            maxLength={20}
+            onChange={handleTextChange(setNombre)}
           />
         </Form.Group>
 
@@ -59,7 +73,8 @@ const Registro = () => {
             type="text"
             placeholder="Ingresa tu apellido"
             value={apellido}
-            onChange={(e) => setApellido(e.target.value)}
+            maxLength={20}
+            onChange={handleTextChange(setApellido)}
           />
         </Form.Group>
 
@@ -69,7 +84,8 @@ const Registro = () => {
             type="text"
             placeholder="Ingresa tu DNI"
             value={dni}
-            onChange={(e) => setDni(e.target.value)}
+            maxLength={8}
+            onChange={handleDniChange}
           />
         </Form.Group>
 
@@ -79,7 +95,8 @@ const Registro = () => {
             type="text"
             placeholder="Ingresa tu equipo"
             value={equipo}
-            onChange={(e) => setEquipo(e.target.value)}
+            maxLength={20}
+            onChange={handleTextChange(setEquipo)}
           />
         </Form.Group>
 
@@ -89,7 +106,8 @@ const Registro = () => {
             type="text"
             placeholder="Ingresa tu dirección"
             value={direccion}
-            onChange={(e) => setDireccion(e.target.value)}
+            maxLength={20}
+            onChange={handleTextChange(setDireccion)}
           />
         </Form.Group>
 
@@ -99,7 +117,8 @@ const Registro = () => {
             type="email"
             placeholder="Ingresa tu email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            maxLength={20}
+            onChange={handleTextChange(setEmail)}
           />
         </Form.Group>
 
@@ -109,7 +128,8 @@ const Registro = () => {
             type="password"
             placeholder="Ingresa tu contraseña"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            maxLength={20}
+            onChange={handleTextChange(setPassword)}
           />
         </Form.Group>
 
