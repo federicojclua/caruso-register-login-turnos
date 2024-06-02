@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # caruso-register-login-turnos
+=======
+# React + Vite
+>>>>>>> bd8b509a09cf91ac43ee617a1b5876d51de9dff0
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

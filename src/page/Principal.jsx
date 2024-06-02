@@ -58,7 +58,10 @@ const Principal = () => {
           <TurnosTabla
             turnos={turnos.filter(turno => turno.sucursal === sucursalSeleccionada)}
             sucursal={sucursales.find((s) => s.id === sucursalSeleccionada)}
+<<<<<<< HEAD
             agregarTurno={agregarTurno}  // Pass the agregarTurno function
+=======
+>>>>>>> bd8b509a09cf91ac43ee617a1b5876d51de9dff0
           />
         </>
       )}
