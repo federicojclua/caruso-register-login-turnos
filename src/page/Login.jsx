@@ -1,17 +1,11 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-=======
-import React, { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
->>>>>>> bd8b509a09cf91ac43ee617a1b5876d51de9dff0
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordError, setPasswordError] = useState('');
-<<<<<<< HEAD
   const [serverError, setServerError] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   const navigate = useNavigate();
@@ -28,11 +22,6 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-=======
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
->>>>>>> bd8b509a09cf91ac43ee617a1b5876d51de9dff0
     // Validación de la contraseña
     if (password.length < 4 || password.length > 20) {
       setPasswordError('Password must be at least 4 characters and less than 20 characters');
@@ -41,7 +30,6 @@ const Login = () => {
       setPasswordError('');
     }
 
-<<<<<<< HEAD
     try {
       const response = await fetch('http://localhost:5004/api/auth/login', {
         method: 'POST',
@@ -99,45 +87,6 @@ const Login = () => {
         </Button>
       </Form>
     </div>
-=======
-    const response = await fetch('http://localhost:5004/api/auth/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email, password }),
-    });
-    // Aquí manejas la respuesta según tu lógica
-  };
-
-  return (
-    <Form onSubmit={handleSubmit}>
-      <Form.Group controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control
-          type="email"
-          placeholder="Enter email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </Form.Group>
-      <Form.Group controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control
-          type="password"
-          placeholder="Enter password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        {passwordError && <Form.Text className="text-danger">{passwordError}</Form.Text>}
-      </Form.Group>
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
-    </Form>
->>>>>>> bd8b509a09cf91ac43ee617a1b5876d51de9dff0
   );
 };
 
