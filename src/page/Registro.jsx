@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import "./Registro.css";
+// import "./Registro.css";
 
 const Registro = () => {
   const [nombre, setNombre] = useState('');
@@ -15,7 +15,6 @@ const Registro = () => {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-<<<<<<< HEAD
   const handleDniChange = (e) => {
     const value = e.target.value;
     if (/^\d*$/.test(value) && value.length <= 8) {
@@ -30,8 +29,6 @@ const Registro = () => {
     }
   };
 
-=======
->>>>>>> bd8b509a09cf91ac43ee617a1b5876d51de9dff0
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -53,10 +50,6 @@ const Registro = () => {
       setError('Error al registrarse. Intenta nuevamente.');
     }
   };
-<<<<<<< HEAD
-=======
-  
->>>>>>> bd8b509a09cf91ac43ee617a1b5876d51de9dff0
 
   return (
     <Container className="mt-5">
@@ -69,12 +62,8 @@ const Registro = () => {
             type="text"
             placeholder="Ingresa tu nombre"
             value={nombre}
-<<<<<<< HEAD
             maxLength={20}
             onChange={handleTextChange(setNombre)}
-=======
-            onChange={(e) => setNombre(e.target.value)}
->>>>>>> bd8b509a09cf91ac43ee617a1b5876d51de9dff0
           />
         </Form.Group>
 
@@ -84,12 +73,8 @@ const Registro = () => {
             type="text"
             placeholder="Ingresa tu apellido"
             value={apellido}
-<<<<<<< HEAD
             maxLength={20}
             onChange={handleTextChange(setApellido)}
-=======
-            onChange={(e) => setApellido(e.target.value)}
->>>>>>> bd8b509a09cf91ac43ee617a1b5876d51de9dff0
           />
         </Form.Group>
 
@@ -99,12 +84,8 @@ const Registro = () => {
             type="text"
             placeholder="Ingresa tu DNI"
             value={dni}
-<<<<<<< HEAD
             maxLength={8}
             onChange={handleDniChange}
-=======
-            onChange={(e) => setDni(e.target.value)}
->>>>>>> bd8b509a09cf91ac43ee617a1b5876d51de9dff0
           />
         </Form.Group>
 
@@ -114,12 +95,8 @@ const Registro = () => {
             type="text"
             placeholder="Ingresa tu equipo"
             value={equipo}
-<<<<<<< HEAD
             maxLength={20}
             onChange={handleTextChange(setEquipo)}
-=======
-            onChange={(e) => setEquipo(e.target.value)}
->>>>>>> bd8b509a09cf91ac43ee617a1b5876d51de9dff0
           />
         </Form.Group>
 
@@ -129,12 +106,8 @@ const Registro = () => {
             type="text"
             placeholder="Ingresa tu dirección"
             value={direccion}
-<<<<<<< HEAD
             maxLength={20}
             onChange={handleTextChange(setDireccion)}
-=======
-            onChange={(e) => setDireccion(e.target.value)}
->>>>>>> bd8b509a09cf91ac43ee617a1b5876d51de9dff0
           />
         </Form.Group>
 
@@ -144,12 +117,8 @@ const Registro = () => {
             type="email"
             placeholder="Ingresa tu email"
             value={email}
-<<<<<<< HEAD
             maxLength={20}
             onChange={handleTextChange(setEmail)}
-=======
-            onChange={(e) => setEmail(e.target.value)}
->>>>>>> bd8b509a09cf91ac43ee617a1b5876d51de9dff0
           />
         </Form.Group>
 
@@ -159,12 +128,8 @@ const Registro = () => {
             type="password"
             placeholder="Ingresa tu contraseña"
             value={password}
-<<<<<<< HEAD
             maxLength={20}
             onChange={handleTextChange(setPassword)}
-=======
-            onChange={(e) => setPassword(e.target.value)}
->>>>>>> bd8b509a09cf91ac43ee617a1b5876d51de9dff0
           />
         </Form.Group>
 
