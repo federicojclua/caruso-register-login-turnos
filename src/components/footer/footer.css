@@ -1,0 +1,108 @@
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 0px;
+    text-align: center;
+    bottom: 0px;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+  }
+  
+  .footer-column h5 {
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    display: flex;
+    text-align: center;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  .footer-column ul li {
+    margin: 5px 0;
+    font-size: 1vw;
+    font-weight: normal;
+  
+  }
+  
+  .footer-column a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-column a:hover {
+    color: #bbb;
+    transform: rotate(360deg);
+  }
+  
+  .footer-logo {
+    max-width: 50%;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .footer-logo:hover {
+    transform: rotate(360deg);
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .social-icons a {
+    color: #bbb;
+    font-size: 20px;
+    margin-left: 1%;
+    margin-right: 1%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Efecto hover para los iconos sociales */
+  .social-icons a:hover {
+    color: white;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 1%;
+    border-top: 1px solid #444;
+    padding-top: 1%;
+  }
+  
+  .footer-bottom p {
+    margin: 2px 0;
+  }
+  
+  @media (max-width: 850px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .footer-column {
+      flex: 100%;
+      max-width: 100%;
+      margin: 10px 0;
+    }
+  
+    .footer-bottom {
+      padding-top: 0px;
+    }
+  }
+  

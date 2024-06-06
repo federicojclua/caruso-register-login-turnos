@@ -10,7 +10,7 @@ const Login = () => {
   const [successMessage, setSuccessMessage] = useState('');
   const navigate = useNavigate();
 
-  // Utiliza useEffect para limpiar el mensaje de éxito después de 2 segundos
+  // Utilize useEffect to clear the success message after 2 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
       setSuccessMessage('');
@@ -22,7 +22,11 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+<<<<<<< HEAD
     // Validación de la contraseña
+=======
+    // Validate password
+>>>>>>> ee8c70e (Se agrego sistema de reservas, principal.jsx y css, tambien AgregarTurnos, Formulario y TurnosTabla)
     if (password.length < 4 || password.length > 20) {
       setPasswordError('Password must be at least 4 characters and less than 20 characters');
       return;
@@ -42,17 +46,17 @@ const Login = () => {
       const data = await response.json();
 
       if (response.ok) {
-        // Manejo de un inicio de sesión exitoso
-        setSuccessMessage('Inicio de sesión exitoso. ¡Bienvenido de nuevo!');
+        // Handle successful login
+        setSuccessMessage('Login successful. Welcome back!');
         setTimeout(() => {
-          navigate('/'); // Redirigir a la página de inicio después de un inicio de sesión exitoso
-        }, 2000); // Transición de 2 segundos
+          navigate('/'); // Redirect to home page after successful login
+        }, 2000); // 2 seconds transition
       } else {
-        // Manejo de errores del servidor
-        setServerError(data.message || 'Error al iniciar sesión. Intenta nuevamente.');
+        // Handle server errors
+        setServerError(data.message || 'Error logging in. Please try again.');
       }
     } catch (error) {
-      setServerError('Error al iniciar sesión. Intenta nuevamente.');
+      setServerError('Error logging in. Please try again.');
     }
   };
 

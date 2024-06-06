@@ -62,7 +62,10 @@ const Registro = () => {
             type="text"
             placeholder="Ingresa tu nombre"
             value={nombre}
+<<<<<<< HEAD
             maxLength={20}
+=======
+>>>>>>> ee8c70e (Se agrego sistema de reservas, principal.jsx y css, tambien AgregarTurnos, Formulario y TurnosTabla)
             onChange={handleTextChange(setNombre)}
           />
         </Form.Group>
@@ -73,7 +76,10 @@ const Registro = () => {
             type="text"
             placeholder="Ingresa tu apellido"
             value={apellido}
+<<<<<<< HEAD
             maxLength={20}
+=======
+>>>>>>> ee8c70e (Se agrego sistema de reservas, principal.jsx y css, tambien AgregarTurnos, Formulario y TurnosTabla)
             onChange={handleTextChange(setApellido)}
           />
         </Form.Group>
@@ -84,7 +90,10 @@ const Registro = () => {
             type="text"
             placeholder="Ingresa tu DNI"
             value={dni}
+<<<<<<< HEAD
             maxLength={8}
+=======
+>>>>>>> ee8c70e (Se agrego sistema de reservas, principal.jsx y css, tambien AgregarTurnos, Formulario y TurnosTabla)
             onChange={handleDniChange}
           />
         </Form.Group>
@@ -95,7 +104,10 @@ const Registro = () => {
             type="text"
             placeholder="Ingresa tu equipo"
             value={equipo}
+<<<<<<< HEAD
             maxLength={20}
+=======
+>>>>>>> ee8c70e (Se agrego sistema de reservas, principal.jsx y css, tambien AgregarTurnos, Formulario y TurnosTabla)
             onChange={handleTextChange(setEquipo)}
           />
         </Form.Group>
@@ -106,7 +118,10 @@ const Registro = () => {
             type="text"
             placeholder="Ingresa tu dirección"
             value={direccion}
+<<<<<<< HEAD
             maxLength={20}
+=======
+>>>>>>> ee8c70e (Se agrego sistema de reservas, principal.jsx y css, tambien AgregarTurnos, Formulario y TurnosTabla)
             onChange={handleTextChange(setDireccion)}
           />
         </Form.Group>
@@ -117,7 +132,10 @@ const Registro = () => {
             type="email"
             placeholder="Ingresa tu email"
             value={email}
+<<<<<<< HEAD
             maxLength={20}
+=======
+>>>>>>> ee8c70e (Se agrego sistema de reservas, principal.jsx y css, tambien AgregarTurnos, Formulario y TurnosTabla)
             onChange={handleTextChange(setEmail)}
           />
         </Form.Group>
@@ -128,7 +146,10 @@ const Registro = () => {
             type="password"
             placeholder="Ingresa tu contraseña"
             value={password}
+<<<<<<< HEAD
             maxLength={20}
+=======
+>>>>>>> ee8c70e (Se agrego sistema de reservas, principal.jsx y css, tambien AgregarTurnos, Formulario y TurnosTabla)
             onChange={handleTextChange(setPassword)}
           />
         </Form.Group>

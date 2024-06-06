@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import AgregarTurno from '../components/AgregarTurno';
 import TurnosTabla from '../components/TurnosTabla';
-// import './Principal.css';
-// import './VideoBackground.css'
+import NavBar from '../components/nav-bar/Nav-bar'; // Ruta corregida
+import WhatsAppButton from '../components/WhatsAppButton/WhatsAppButton';
+import './Principal.css';
+import Footer from '../components/footer/Footer';
+
 
 const Principal = () => {
   const [turnos, setTurnos] = useState([]);
   const [sucursalSeleccionada, setSucursalSeleccionada] = useState('');
+  const [tipoCancha, setTipoCancha] = useState('');
+  const [fecha, setFecha] = useState('');
   const [tipoCancha, setTipoCancha] = useState('');
   const [fecha, setFecha] = useState('');
 
@@ -35,13 +40,16 @@ const Principal = () => {
   const agregarTurno = (nuevoTurno) => {
     setTurnos([...turnos, nuevoTurno]);
     alert('Su turno fue registrado con éxito. Por cualquier cambio consulte con el administrador.');
+    alert('Su turno fue registrado con éxito. Por cualquier cambio consulte con el administrador.');
   };
 
   return (
+    
     <div className="container">
+      <NavBar/>
+      
       <video className="video-bg" autoplay loop muted>
         <source src="/assets/video/video-sistema.mp4" type="video/mp4" />
-
         Tu navegador no soporta el elemento de video.
       </video>
       <div className="content">
@@ -92,6 +100,10 @@ const Principal = () => {
           </>
         )}
       </div>
+      
+      <WhatsAppButton />
+      <Footer/>
+      
     </div>
   );
 };
